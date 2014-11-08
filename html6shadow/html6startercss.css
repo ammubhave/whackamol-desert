@@ -1,0 +1,32 @@
+body {
+  background-color: #D2BDA4;
+}
+
+img {
+  position: absolute;
+}
+
+#temple {
+  height: 400px;
+  width: 600px;
+  /* Your CSS here */
+}
+
+#shadow {
+  width: 725px;
+  height: 500px;
+  opacity: 0.4;
+  /* Your CSS here */
+}
+
+html, body, #wrapper {
+   height:100%;
+   width: 100%;
+   margin: 0;
+   padding: 0;
+   border: 0;
+}
+#wrapper td {
+   vertical-align: middle;
+   text-align: center;
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html style="height : 100%">
+<head>
+    <meta charset=utf-8 />
+    <title>Desert Discovery - HTML Question 6</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="html6startercss.css" />
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script>
+    var intv;
+    var triggered = false;
+    var num;
+        $(document).ready(function()
+        {
+
+$('#temple').mouseover(function() { 
+ if(triggered) return;
+ triggered = true;
+            num = 0;
+            intv = setInterval(function(now,fx) {
+    console.log(now);
+  $('#shadow').css('transform','skewX('+num+'rad)'); 
+  $('#shadow').css('left','-'+200*num+'px');
+  num+=0.01;
+  if(num > 0.523) { clearInterval(intv);
+
+  intv = setInterval(function(now,fx) {
+    console.log(now);
+  $('#shadow').css('transform','skewX('+num+'rad)'); 
+  $('#shadow').css('left','-'+200*num+'px');
+  num-=0.01;
+  if(num < 0) { clearInterval(intv); triggered = false; }
+}, 20);
+}
+
+}, 20);
+     });   });
+    </script>
+</head>
+<body>
+<table id="wrapper">
+      <tr>
+         <td>
+            <div style="position: relative; top: -300px; left: -350px; display: inline-block">
+
+    <img id="shadow" src="shadow.png" style="left: 0; top:0" />
+
+    <img id="temple" src="temple.svg" style="left: 64px; top: 150px" />
+</div>
+
+         </td>
+      </tr>
+   </table>
+</body>
+</html>
