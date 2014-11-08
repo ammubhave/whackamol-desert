@@ -4,20 +4,6 @@ img {
 	display: inline-block;
 }
 
-//CSS:
-#parent
-{
-    position:relative;
-    height: 3em;
-    border: 1px solid black;
-}
-
-#child
-{
-    position: absolute;
-    top: 50%;
-}​ 
-
 html, body, #wrapper {
    height:100%;
    width: 100%;
