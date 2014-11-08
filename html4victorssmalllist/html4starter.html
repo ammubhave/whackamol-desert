@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset=utf-8 />
+  <title>Desert Discovery - HTML Question 4</title>
+  <link rel="stylesheet" type="text/css" media="screen" href="html4startercss.css" />
+  <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+  <script>
+  $(document).ready(function()
+{
+  $(".row:odd").css("background-color", "#B0B0B0");
+
+$('.row').hover(function()
+{
+
+    $(this).css("background-color", "#EE9A49");
+},function()
+{
+    $(this).css("background-color", "#ffffff");
+    $(".row:odd").css("background-color", "#B0B0B0");
+});
+$('.row').click(function() {
+  if($(this).find('input').is(':checked'))  {
+    $(this).find('label').css('text-decoration', 'line-through'); 
+  } else {
+     $(this).find('label').css('text-decoration', 'none'); 
+  }
+ // if($(this).find('input').val())
+});
+
+});
+
+
+
+
+  </script>
+
+</head>
+<body>
+  <h1 style="text-align: center">Victor's Travel Checklist</h1>
+  <table class="checklist" style="margin: auto">  
+    <tbody>
+      <tr style="background-color: white">
+        <th>Victor's Goodies</th>
+      </tr>
+      <tr class="row">
+        <td>
+          <input id="check1" type="checkbox" name="check" value="check1">  
+          <label for="check1">Water</label>  
+        </td>
+      </tr> 
+      <tr class="row">
+         <td>
+           <input id="check2" type="checkbox" name="check" value="check2">  
+           <label for="check2">Water pouch</label>  
+         </td>
+      </tr>
+      <tr class="row">
+        <td>
+          <input id="check3" type="checkbox" name="check" value="check3">  
+          <label for="check3">More water</label>  
+        </td>
+      </tr>
+      <tr class="row">
+        <td>
+          <input id="check4" type="checkbox" name="check" value="check4">  
+          <label for="check4">Small cat</label>  
+        </td>
+      </tr>
+      <tr class="row">
+        <td>
+          <input id="check5" type="checkbox" name="check" value="check5">  
+          <label for="check5">Top Hat</label>  
+        </td>
+      </tr>
+      <tr class="row">
+        <td>
+          <input id="check6" type="checkbox" name="check" value="check6">  
+          <label for="check6">Emergency Sand (for when the desert runs out of sand)</label>  
+        </td>
+      </tr>
+      <tr class="row">
+        <td>
+          <input id="check7" type="checkbox" name="check" value="check6">  
+          <label for="check7">Victor's Passport</label>  
+        </td>
+      </tr>
+  </table>
+</body>
+</html>
